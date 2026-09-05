@@ -45,10 +45,8 @@ export function Hero() {
           </div>
         </div>
 
-        <Reveal
-          initialShow
-          className="hero-stage relative flex min-h-[575px] items-center justify-end overflow-visible max-lg:mt-3 max-lg:min-h-[430px] max-lg:justify-center max-sm:min-h-[350px]"
-        >
+        <div className="hero-enter-stage hero-stage relative flex min-h-[575px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[430px] max-sm:min-h-[350px]">
+
           <div
             className="hero-composition relative ml-auto h-[585px] w-[min(930px,132%)] max-lg:h-[440px] max-lg:w-full max-sm:h-[350px]"
             aria-label="Soni junto al panel de Contax-AI"
