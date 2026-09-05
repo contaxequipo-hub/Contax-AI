@@ -48,11 +48,11 @@ export function Hero() {
         <div className="hero-enter-stage hero-stage relative flex min-h-[575px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[430px] max-sm:min-h-[350px]">
 
           <div
-            className="hero-composition relative ml-auto h-[585px] w-[min(930px,132%)] max-lg:h-[440px] max-lg:w-full max-sm:h-[350px]"
+            className="hero-composition relative mx-auto h-[585px] w-[min(930px,100%)] max-lg:h-[440px] max-lg:w-full max-sm:h-[350px]"
             aria-label="Soni junto al panel de Contax-AI"
           >
             <img
-              className="hero-laptop-art absolute right-[-1%] bottom-0 block w-[88%] max-w-none max-lg:w-[93%] max-sm:w-[108%] max-sm:right-[-10%]"
+              className="hero-laptop-art absolute right-0 bottom-0 block w-[86%] max-w-none max-lg:w-[93%] max-sm:w-[108%] max-sm:right-[-4%]"
               src={laptop}
               alt="Panel de control de Contax-AI en una computadora"
               width={1408}
@@ -60,14 +60,14 @@ export function Hero() {
               fetchPriority="high"
             />
             <img
-              className="hero-soni-art absolute bottom-[8%] left-[2%] z-[3] block w-[31%] max-w-[245px] max-lg:w-[29%] max-sm:w-[32%]"
+              className="hero-soni-art absolute bottom-[6%] left-[2%] z-[3] block w-[26%] max-w-[210px] max-lg:w-[24%] max-sm:w-[28%]"
               src={soni}
               alt="Soni, la IA Contable de Contax-AI"
               width={912}
               height={912}
             />
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );
