@@ -1,4 +1,6 @@
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/contax-logo.asset.json";
+
+const logo = logoAsset.url;
 
 export function Footer() {
   return (

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/contax-logo.asset.json";
+
+const logo = logoAsset.url;
 
 const LINKS = [
   { href: "#inicio", label: "Inicio", id: "inicio" },
@@ -27,7 +29,7 @@ export function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 flex h-[76px] items-center justify-between border-b border-line/70 bg-paper/90 backdrop-blur-[18px]">
-      <div className="container-ct flex w-full items-center justify-between">
+      <div className="container-ct flex items-center justify-between">
         <a href="#inicio" aria-label="Contax-AI — inicio">
           <img
             src={logo}
