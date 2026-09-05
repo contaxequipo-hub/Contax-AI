@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/contax-logo.asset.json";
+
+const logo = logoAsset.url;
 
 const LINKS = [
   { href: "#inicio", label: "Inicio", id: "inicio" },

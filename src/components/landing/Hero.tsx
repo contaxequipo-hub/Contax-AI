@@ -1,6 +1,8 @@
 import { Reveal } from "./Reveal";
 import laptop from "@/assets/laptop.png";
-import soni from "@/assets/soni.png";
+import soniAsset from "@/assets/soni.asset.json";
+
+const soni = soniAsset.url;
 
 export function Hero() {
   return (
