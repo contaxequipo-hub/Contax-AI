@@ -5,7 +5,7 @@ const soni = soniAsset.url;
 
 export function Hero() {
   return (
-    <section id="inicio" className="hero relative overflow-hidden pt-[76px] pb-[70px]">
+    <section id="inicio" className="hero relative overflow-hidden pt-[96px] pb-[46px] max-lg:pt-[110px]">
       <div className="container-ct hero-grid relative z-[2] grid items-center gap-8 lg:grid-cols-2 lg:gap-0">
         <div className="flex flex-col items-start justify-center">
           <span className="hero-enter inline-flex items-center gap-2 rounded-full bg-[#e9f0f1] px-[13px] py-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-blue" style={{ animationDelay: "0.05s" }}>
@@ -44,13 +44,13 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-enter-stage hero-stage relative flex min-h-[640px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[480px] max-sm:min-h-[380px]">
+        <div className="hero-enter-stage hero-stage relative flex min-h-[660px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[500px] max-sm:min-h-[390px]">
 
           <div
-            className="hero-composition relative mx-auto h-[650px] w-[min(1040px,100%)] max-lg:h-[490px] max-lg:w-full max-sm:h-[380px]"
+            className="hero-composition relative mx-auto h-[680px] w-[min(1200px,108%)] max-lg:h-[510px] max-lg:w-full max-sm:h-[400px]"
             aria-label="Soni junto al panel de Contax-AI"
           >
-            <div className="hero-laptop-tilt absolute right-[-2%] bottom-0 w-[94%] max-lg:w-[98%] max-sm:right-[-6%] max-sm:w-[112%]">
+            <div className="hero-laptop-tilt absolute right-[-9%] bottom-0 w-[112%] max-lg:right-[-4%] max-lg:w-[104%] max-sm:right-[-8%] max-sm:w-[116%]">
               <img
                 className="hero-laptop-art block w-full max-w-none"
                 src={laptop}
@@ -61,15 +61,15 @@ export function Hero() {
               />
             </div>
             <img
-              className="hero-soni-art absolute bottom-[4%] left-[1%] z-[3] block w-[31%] max-w-[280px] max-lg:w-[28%] max-sm:w-[32%]"
+              className="hero-soni-art absolute bottom-[3%] left-[0%] z-[3] block w-[30%] max-w-[300px] max-lg:w-[28%] max-sm:w-[32%]"
               src={soni}
               alt="Soni, la IA Contable de Contax-AI"
               width={912}
               height={912}
             />
-            <div className="soni-bubble absolute bottom-[64%] left-[4%] z-[4] max-w-[240px] rounded-2xl rounded-bl-[4px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-[0_14px_30px_rgba(49,66,75,.16)] max-sm:max-w-[190px] max-sm:text-[11px]">
+            <div className="soni-bubble absolute bottom-[38%] left-[13%] z-[4] max-w-[230px] rounded-2xl rounded-bl-[4px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-[0_14px_30px_rgba(49,66,75,.16)] max-sm:left-[10%] max-sm:max-w-[180px] max-sm:text-[11px]">
               Hola, soy Soni. Estoy aquí para ayudarte
-              <span className="absolute -bottom-[7px] left-6 h-4 w-4 rotate-45 bg-paper" aria-hidden="true" />
+              <span className="absolute -bottom-[7px] left-4 h-4 w-4 rotate-45 bg-paper" aria-hidden="true" />
             </div>
           </div>
         </div>
