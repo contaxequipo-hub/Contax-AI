@@ -5,7 +5,7 @@ const soni = soniAsset.url;
 
 export function Hero() {
   return (
-    <section id="inicio" className="hero relative overflow-hidden pt-[26px] pb-[46px] max-lg:pt-[34px]">
+    <section id="inicio" className="hero relative overflow-hidden pt-[10px] pb-[46px] max-lg:pt-[20px]">
       <div className="container-ct hero-grid relative z-[2] grid items-center gap-8 lg:grid-cols-2 lg:gap-0">
         <div className="flex flex-col items-start justify-center">
           <span className="hero-enter inline-flex items-center gap-2 rounded-full bg-[#e9f0f1] px-[13px] py-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-blue" style={{ animationDelay: "0.05s" }}>
@@ -67,7 +67,7 @@ export function Hero() {
               width={912}
               height={912}
             />
-            <div className="soni-bubble absolute bottom-[38%] left-[13%] z-[4] max-w-[230px] rounded-2xl rounded-bl-[4px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-[0_14px_30px_rgba(49,66,75,.16)] max-sm:left-[10%] max-sm:max-w-[180px] max-sm:text-[11px]">
+            <div className="soni-bubble absolute bottom-[27%] left-[12%] z-[4] max-w-[230px] rounded-2xl rounded-bl-[4px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-[0_14px_30px_rgba(49,66,75,.16)] max-sm:left-[10%] max-sm:max-w-[180px] max-sm:text-[11px]">
               Hola, soy Soni. Estoy aquí para ayudarte
               <span className="absolute -bottom-[7px] left-4 h-4 w-4 rotate-45 bg-paper" aria-hidden="true" />
             </div>
