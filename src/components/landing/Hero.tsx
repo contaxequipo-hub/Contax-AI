@@ -5,7 +5,7 @@ const soni = soniAsset.url;
 
 export function Hero() {
   return (
-    <section id="inicio" className="hero relative overflow-hidden pt-[96px] pb-[46px] max-lg:pt-[110px]">
+    <section id="inicio" className="hero relative overflow-hidden pt-[26px] pb-[46px] max-lg:pt-[34px]">
       <div className="container-ct hero-grid relative z-[2] grid items-center gap-8 lg:grid-cols-2 lg:gap-0">
         <div className="flex flex-col items-start justify-center">
           <span className="hero-enter inline-flex items-center gap-2 rounded-full bg-[#e9f0f1] px-[13px] py-2 text-[11px] font-extrabold uppercase tracking-[0.12em] text-blue" style={{ animationDelay: "0.05s" }}>
