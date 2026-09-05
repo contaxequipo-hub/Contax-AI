@@ -443,6 +443,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-laptop-art,
   .hero-soni-art,
+  .soni-bubble,
   .auto-row,
   .reveal {
     animation: none !important;
