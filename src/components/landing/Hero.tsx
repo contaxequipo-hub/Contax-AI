@@ -1,4 +1,3 @@
-import { Reveal } from "./Reveal";
 import laptop from "@/assets/laptop.png";
 import soniAsset from "@/assets/soni.asset.json";
 
