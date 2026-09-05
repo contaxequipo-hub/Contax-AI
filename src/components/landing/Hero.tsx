@@ -44,27 +44,33 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-enter-stage hero-stage relative flex min-h-[575px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[430px] max-sm:min-h-[350px]">
+        <div className="hero-enter-stage hero-stage relative flex min-h-[640px] items-center justify-center overflow-visible max-lg:mt-3 max-lg:min-h-[480px] max-sm:min-h-[380px]">
 
           <div
-            className="hero-composition relative mx-auto h-[585px] w-[min(930px,100%)] max-lg:h-[440px] max-lg:w-full max-sm:h-[350px]"
+            className="hero-composition relative mx-auto h-[650px] w-[min(1040px,100%)] max-lg:h-[490px] max-lg:w-full max-sm:h-[380px]"
             aria-label="Soni junto al panel de Contax-AI"
           >
+            <div className="hero-laptop-tilt absolute right-[-2%] bottom-0 w-[94%] max-lg:w-[98%] max-sm:right-[-6%] max-sm:w-[112%]">
+              <img
+                className="hero-laptop-art block w-full max-w-none"
+                src={laptop}
+                alt="Panel de control de Contax-AI en una computadora"
+                width={1408}
+                height={912}
+                fetchPriority="high"
+              />
+            </div>
             <img
-              className="hero-laptop-art absolute right-0 bottom-0 block w-[86%] max-w-none max-lg:w-[93%] max-sm:w-[108%] max-sm:right-[-4%]"
-              src={laptop}
-              alt="Panel de control de Contax-AI en una computadora"
-              width={1408}
-              height={912}
-              fetchPriority="high"
-            />
-            <img
-              className="hero-soni-art absolute bottom-[6%] left-[2%] z-[3] block w-[26%] max-w-[210px] max-lg:w-[24%] max-sm:w-[28%]"
+              className="hero-soni-art absolute bottom-[4%] left-[1%] z-[3] block w-[31%] max-w-[280px] max-lg:w-[28%] max-sm:w-[32%]"
               src={soni}
               alt="Soni, la IA Contable de Contax-AI"
               width={912}
               height={912}
             />
+            <div className="soni-bubble absolute bottom-[64%] left-[4%] z-[4] max-w-[240px] rounded-2xl rounded-bl-[4px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-[0_14px_30px_rgba(49,66,75,.16)] max-sm:max-w-[190px] max-sm:text-[11px]">
+              Hola, soy Soni. Estoy aquí para ayudarte
+              <span className="absolute -bottom-[7px] left-6 h-4 w-4 rotate-45 bg-paper" aria-hidden="true" />
+            </div>
           </div>
         </div>
       </div>
