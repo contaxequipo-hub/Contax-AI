@@ -7,6 +7,11 @@ export default defineConfig({
   vite: {
     nitro: {
       preset: "vercel",
+      // Forzar el empaquetado de todas las dependencias del servidor
+      rollupConfig: {
+        external: [],
+      },
+      inlineDynamicImports: true,
     },
   },
 });
