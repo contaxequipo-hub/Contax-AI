@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/contax-logo.asset.json";
 
-const logo = logoAsset.url;
+const logo = "/contax-ai-logo.png";
 
 const LINKS = [
   { href: "#inicio", label: "Inicio", id: "inicio" },
@@ -34,7 +33,7 @@ export function Nav() {
           <img
             src={logo}
             alt="Contax-AI"
-            className="h-[58px] w-[184px] object-contain mix-blend-multiply max-sm:w-[160px]"
+            className="h-[58px] w-[184px] object-contain max-sm:w-[160px]"
             width={1152}
             height={576}
           />
