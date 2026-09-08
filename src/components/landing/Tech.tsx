@@ -25,7 +25,8 @@ export function Tech() {
           </p>
         </Reveal>
         <Reveal className="relative min-h-[390px] overflow-hidden rounded-[30px] bg-[#eef3f3] p-6">
-          <div className="relative z-[2] rounded-[18px] bg-paper p-[18px] shadow-[0_22px_70px_rgba(49,66,75,.13)]">
+          {/* Contenedor principal con el borde marrón (border-earth) */}
+          <div className="relative z-[2] rounded-[18px] border-2 border-earth bg-paper p-[18px] shadow-[0_22px_70px_rgba(49,66,75,.13)]">
             <div className="mb-4 flex gap-[7px]">
               <i className="h-[7px] w-[7px] rounded-full bg-[#c9d2d4]" />
               <i className="h-[7px] w-[7px] rounded-full bg-[#c9d2d4]" />

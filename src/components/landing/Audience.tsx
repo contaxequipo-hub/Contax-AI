@@ -25,7 +25,7 @@ export function Audience() {
           {AUDIENCES.map(([title, text]) => (
             <Reveal
               key={title}
-              className="rounded-[18px] border border-[#e3e9e9] bg-[#f7f9f8] p-[19px]"
+              className="rounded-[18px] border border-earth bg-[#f7f9f8] p-[19px]"
             >
               <b className="text-sm text-ink">{title}</b>
               <p className="mt-[7px] mb-0 text-xs leading-[1.5] text-[#788990]">{text}</p>

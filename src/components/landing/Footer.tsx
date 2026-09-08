@@ -1,21 +1,12 @@
-import logoAsset from "@/assets/contax-logo.asset.json";
-
-const logo = logoAsset.url;
-
 export function Footer() {
   return (
     <footer className="border-t border-[#e3e9ea] py-[45px]">
       <div className="container-ct flex flex-wrap items-end justify-between gap-[30px] max-sm:block">
         <div>
-          <img
-            src={logo}
-            alt="Contax-AI"
-            className="h-[58px] w-[184px] object-contain mix-blend-multiply"
-            width={1152}
-            height={576}
-            loading="lazy"
-          />
-          <small className="text-[#85949a]">
+          <span className="text-xl font-bold tracking-tight text-ink block mb-2">
+            Contax-AI
+          </span>
+          <small className="text-[#85949a] block">
             © 2026 Contax-AI · Estudio Contable · Asesoramiento online
           </small>
         </div>
