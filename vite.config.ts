@@ -1,17 +1,12 @@
-import { defineConfig as defineLovableConfig } from "@lovable.dev/vite-tanstack-config";
-import { defineConfig, mergeConfig } from "vite";
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-const baseConfig = defineLovableConfig({
+export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-});
-
-export default mergeConfig(
-  baseConfig,
-  defineConfig({
+  vite: {
     nitro: {
       preset: "vercel",
     },
-  })
-);
+  },
+});
