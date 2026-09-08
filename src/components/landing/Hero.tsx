@@ -1,7 +1,6 @@
 import laptop from "@/assets/laptop.png";
-import soniAsset from "@/assets/soni.asset.json";
 
-const soni = soniAsset.url;
+const soni = "/soni.jpeg";
 
 export function Hero() {
   return (
