@@ -7,11 +7,9 @@ export default defineConfig({
   vite: {
     nitro: {
       preset: "vercel",
-      rollupConfig: {
-        external: [],
+      externals: {
+        inline: ["tslib"],
       },
-      // Forzar explícitamente el empaquetado interno de todas las dependencias
-      minify: false,
     },
   },
 });
