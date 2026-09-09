@@ -17,7 +17,7 @@ export function Hero() {
             Estudio contable · Online 24/7
           </span>
           <h1
-            className="hero-enter my-4 text-[clamp(38px,4.8vw,70px)] leading-[0.98] tracking-[-0.055em] text-ink"
+            className="hero-enter my-4 text-[clamp(34px,4.8vw,70px)] leading-[0.98] tracking-[-0.055em] text-ink"
             style={{ animationDelay: "0.15s" }}
           >
             Contabilidad que <span className="block text-blue">evoluciona</span>
@@ -72,17 +72,22 @@ export function Hero() {
 
             {/* Soni Art */}
             <img
-              className="hero-soni-art absolute bottom-[-4%] left-[-4%] z-[3] block w-[34%] max-w-[270px] max-lg:w-[30%] max-sm:w-[34%]"
+              className="hero-soni-art absolute bottom-[-4%] left-[-4%] z-[3] block w-[34%] max-w-[270px] max-lg:w-[30%] max-sm:w-[38%]"
               src={soni}
               alt="Soni, la IA Contable de Contax-AI"
               width={912}
               height={912}
             />
 
-            {/* Burbuja apuntando al pico */}
-            <div className="soni-bubble absolute bottom-[48%] left-[-10%] z-[20] max-w-[190px] rounded-2xl rounded-br-[2px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-xl border border-slate-200/90 max-sm:left-[-2%] max-sm:bottom-[42%] max-sm:max-w-[150px] max-sm:text-[11px]">
+            {/*
+              Burbuja: reposicionada para NO tapar la cara de Soni.
+              - Desktop/tablet: queda arriba a la izquierda del personaje, apuntando hacia abajo.
+              - Mobile: sube más (bottom-[78%]) y se corre a la derecha (left en vez de negativo),
+                así queda por ENCIMA de la cabeza en vez de sobre la cara.
+            */}
+            <div className="soni-bubble absolute bottom-[62%] left-[-6%] z-[20] max-w-[190px] rounded-2xl rounded-br-[2px] bg-paper px-4 py-3 text-[13px] font-bold leading-[1.35] text-ink shadow-xl border border-slate-200/90 max-sm:bottom-[80%] max-sm:left-[6%] max-sm:max-w-[135px] max-sm:px-3 max-sm:py-2 max-sm:text-[10px]">
               Hola, soy Soni. Estoy aquí para ayudarte
-              <span className="absolute -bottom-1.5 right-6 h-3.5 w-3.5 rotate-45 bg-paper border-r border-b border-slate-200/90" aria-hidden="true" />
+              <span className="absolute -bottom-1.5 right-6 h-3.5 w-3.5 rotate-45 bg-paper border-r border-b border-slate-200/90 max-sm:right-4" aria-hidden="true" />
             </div>
           </div>
         </div>
