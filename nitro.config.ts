@@ -8,4 +8,7 @@ export default defineConfig({
   commonJS: {
     requireReturnsDefault: "auto",
   },
+  alias: {
+    tslib: "tslib/tslib.js",
+  },
 });
