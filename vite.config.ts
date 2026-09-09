@@ -7,9 +7,7 @@ export default defineConfig({
   vite: {
     nitro: {
       preset: "vercel",
-      externals: {
-        inline: ["tslib"],
-      },
+      noExternals: ["tslib"],
     },
   },
 });
