@@ -5,4 +5,7 @@ export default defineConfig({
   noExternals: ["tslib"],
   traceDeps: ["tslib*"],
   inlineDynamicImports: true,
+  commonJS: {
+    requireReturnsDefault: "auto",
+  },
 });
