@@ -9,11 +9,13 @@ const STATS = [
 export function Trust() {
   return (
     <Reveal initialShow className="container-ct mx-auto relative z-[8] -mt-[34px] max-sm:-mt-[18px]">
-      <div className="grid grid-cols-1 items-center justify-center gap-6 rounded-[22px] border border-[#e3e9ea] bg-paper p-[19px] text-center shadow-[0_22px_70px_rgba(49,66,75,.13)] sm:grid-cols-3 sm:gap-0">
+      <div className="grid grid-cols-3 items-center justify-center gap-2 rounded-[22px] border border-[#e3e9ea] bg-paper p-[19px] text-center shadow-[0_22px_70px_rgba(49,66,75,.13)] max-sm:gap-1 max-sm:p-3 sm:gap-0">
         {STATS.map(([n, label]) => (
           <div key={label} className="flex flex-col items-center justify-center text-center">
-            <strong className="block text-[25px] text-ink">{n}</strong>
-            <span className="text-[11px] text-[#778990]">{label}</span>
+            <strong className="block text-[25px] text-ink max-sm:text-[17px]">{n}</strong>
+            <span className="text-[11px] text-[#778990] max-sm:text-[9px] max-sm:leading-[1.2]">
+              {label}
+            </span>
           </div>
         ))}
       </div>
