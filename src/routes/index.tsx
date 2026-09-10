@@ -9,6 +9,7 @@ import { Audience } from "@/components/landing/Audience";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 import { Footer } from "@/components/landing/Footer";
+import { WhatsAppButton } from "@/components/landing/WhatsAppButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,6 +50,7 @@ function Index() {
         <Cta />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
