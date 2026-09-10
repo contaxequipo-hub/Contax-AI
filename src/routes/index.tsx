@@ -27,6 +27,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "google-site-verification", content: "GXRLHYP9gg2DO9F_NqqDIW-uRv_rYvsfgypMVUe1t9U" },
     ],
   }),
   component: Index,
