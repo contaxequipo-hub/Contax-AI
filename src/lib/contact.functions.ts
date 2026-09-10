@@ -31,10 +31,9 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       throw new Error("No pudimos guardar tu consulta. Intentá de nuevo.");
     }
 
-    const lovableApiKey = process.env["LOVABLE_API_KEY"];
     const resendApiKey = process.env["RESEND_API_KEY"];
 
-    if (!lovableApiKey || !resendApiKey) {
+    if (!resendApiKey) {
       console.warn("Resend no configurado: la consulta se guardó pero no se envió el email.");
       return { ok: true, emailed: false };
     }
@@ -47,14 +46,17 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       <p><strong>Consulta:</strong><br/>${escapeHtml(data.consulta).replace(/\n/g, "<br/>")}</p>
     `;
 
-    const response = await fetch("https://connector-gateway.lovable.dev/resend/emails", {
+    // Llamada directa a la API de Resend (sin conector de Lovable)
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${lovableApiKey}`,
-        "X-Connection-Api-Key": resendApiKey,
+        Authorization: `Bearer ${resendApiKey}`,
       },
       body: JSON.stringify({
+        // Mientras no verifiques un dominio propio en Resend, tenés que usar
+        // esta dirección de prueba. Una vez que verifiques tu dominio,
+        // cambiá esto por algo como "Contax-AI <contacto@tudominio.com>".
         from: "Contax-AI <onboarding@resend.dev>",
         to: ["contax.equipo@gmail.com"],
         reply_to: data.email,
