@@ -57,7 +57,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         // Mientras no verifiques un dominio propio en Resend, tenés que usar
         // esta dirección de prueba. Una vez que verifiques tu dominio,
         // cambiá esto por algo como "Contax-AI <contacto@tudominio.com>".
-        from: "Contax-AI <onboarding@resend.dev>",
+        from: "Contax-AI <contacto@contax-ai.com.ar>",
         to: ["contax.equipo@gmail.com"],
         reply_to: data.email,
         subject: "Nueva consulta desde la web - Contax-AI",
