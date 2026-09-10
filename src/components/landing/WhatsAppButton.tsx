@@ -1,8 +1,14 @@
-const WHATSAPP_NUMBER = "5491126577018";
-const DEFAULT_MESSAGE = "Hola! Quiero hacer una consulta sobre Contax-AI.";
+     import { WHATSAPP_LINK } from "@/lib/whatsapp";
 
-export function WhatsAppButton() {
-  const link = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
+     export function WhatsAppButton() {
+     return (
+    
+      href={WHATSAPP_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Hablar por WhatsApp"
+      className="group fixed bottom-5 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-[0_8px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 max-sm:bottom-4 max-sm:right-4 max-sm:h-12 max-sm:w-12"
+    >
 
   return (
     <a

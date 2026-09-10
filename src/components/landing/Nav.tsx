@@ -1,3 +1,4 @@
+import { WHATSAPP_LINK } from "@/lib/whatsapp";
 import { useEffect, useState } from "react";
 
 const logo = "/contax-ai-logo.png";
@@ -68,7 +69,7 @@ export function Nav() {
           {/* Botón CTA: se achica en mobile en vez de desaparecer */}
           <a
             className="btn btn-primary max-sm:px-3 max-sm:py-2 max-sm:text-[12px]"
-            href="#contacto"
+            href={WHATSAPP_LINK}
             onClick={handleLinkClick}
           >
             ◔ &nbsp;<span className="max-sm:hidden">Quiero asesorarme</span>

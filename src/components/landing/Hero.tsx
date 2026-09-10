@@ -1,3 +1,4 @@
+import { WHATSAPP_LINK } from "@/lib/whatsapp";
 const soni = "/soni.png";
 const pantalla = "/pantalla ok.png";
 
@@ -46,7 +47,7 @@ export function Hero() {
             ))}
           </div>
           <div className="hero-enter flex flex-wrap gap-[13px]" style={{ animationDelay: "0.65s" }}>
-            <a className="btn btn-primary" href="#contacto">
+            <a className="btn btn-primary" href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               ◔ &nbsp;Quiero asesorarme <span className="text-[17px]">→</span>
             </a>
             <a className="btn btn-light" href="#servicios">
