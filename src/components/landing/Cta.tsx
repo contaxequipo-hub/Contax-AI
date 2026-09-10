@@ -9,6 +9,44 @@ const fieldClass =
   "w-full rounded-[14px] border border-white/20 bg-white/10 px-4 py-3 text-[15px] text-paper placeholder:text-[#a9bcc2] outline-none transition focus:border-white/60 focus:bg-white/15";
 const labelClass = "mb-2 block text-[13px] font-bold text-[#dce6e8]";
 
+// Convierte errores técnicos (como los de validación de Zod, que a veces
+// llegan como JSON crudo) en un mensaje entendible para el usuario.
+function getFriendlyErrorMessage(err: unknown): string {
+  const fallback = "No pudimos enviar tu consulta. Probá de nuevo en unos minutos.";
+  if (!(err instanceof Error) || !err.message) return fallback;
+
+  const raw = err.message.trim();
+
+  // Si el mensaje parece un array/objeto JSON (típico de errores de Zod
+  // que se filtran sin formatear), no se lo mostramos crudo al usuario.
+  if (raw.startsWith("[") || raw.startsWith("{")) {
+    try {
+      const parsed = JSON.parse(raw);
+      const issues = Array.isArray(parsed) ? parsed : [parsed];
+      const firstPath = issues[0]?.path?.[0];
+      if (firstPath === "consulta") {
+        return "Contanos un poco más en '¿Qué consulta tiene?' (mínimo 5 caracteres).";
+      }
+      if (firstPath === "nombre") {
+        return "Revisá el campo 'Nombre y apellido'.";
+      }
+      if (firstPath === "telefono") {
+        return "Revisá el campo 'Teléfono'.";
+      }
+      if (firstPath === "email") {
+        return "Ingresá un email válido.";
+      }
+    } catch {
+      // no era JSON parseable, seguimos al fallback
+    }
+    return "Revisá los datos del formulario e intentá de nuevo.";
+  }
+
+  // Mensajes propios que ya tiramos nosotros (ej: el de Supabase) son
+  // legibles tal cual.
+  return raw;
+}
+
 export function Cta() {
   const send = useServerFn(sendContactMessage);
   const [status, setStatus] = useState<Status>("idle");
@@ -32,11 +70,7 @@ export function Cta() {
       form.reset();
       setStatus("success");
     } catch (err) {
-      setErrorMsg(
-        err instanceof Error && err.message
-          ? err.message
-          : "No pudimos enviar tu consulta. Probá de nuevo en unos minutos.",
-      );
+      setErrorMsg(getFriendlyErrorMessage(err));
       setStatus("error");
     }
   }
@@ -65,6 +99,7 @@ export function Cta() {
                   name="nombre"
                   type="text"
                   required
+                  minLength={2}
                   autoComplete="name"
                   placeholder="Tu nombre completo"
                   className={fieldClass}
@@ -79,6 +114,7 @@ export function Cta() {
                   name="telefono"
                   type="tel"
                   required
+                  minLength={5}
                   autoComplete="tel"
                   placeholder="+54 11 0000 0000"
                   className={fieldClass}
@@ -106,8 +142,9 @@ export function Cta() {
                   id="consulta"
                   name="consulta"
                   required
+                  minLength={5}
                   rows={4}
-                  placeholder="Contanos brevemente tu situación."
+                  placeholder="Contanos brevemente tu situación (mínimo 5 caracteres)."
                   className={`${fieldClass} resize-y`}
                 />
               </div>
