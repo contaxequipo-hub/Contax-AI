@@ -14,7 +14,7 @@ const SERVICES: Array<[string, string, string, string[]]> = [
     ["IVA y Ganancias", "Ingresos Brutos", "DDJJ mensuales y anuales"],
   ],
   [
-    "◌",
+    "$",
     "Ingresos Brutos",
     "Inscripción, liquidación y asesoramiento para tus obligaciones.",
     ["CABA, ARBA y Convenio Multilateral", "COMARB y SIFERE", "Certificados y padrones"],
