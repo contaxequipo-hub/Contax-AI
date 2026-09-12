@@ -17,13 +17,13 @@ const SERVICES: Array<[string, string, string, string[]]> = [
     "$",
     "Ingresos Brutos",
     "Inscripción, liquidación y asesoramiento para tus obligaciones.",
-    ["CABA, ARBA y Convenio Multilateral", "COMARB y SIFERE", "Certificados y padrones"],
+    ["CABA, ARBA y Convenio Multilateral", "COMARB y SIFERE", "Certificados de no retención"],
   ],
   [
     "⌁",
     "Regímenes de facturación",
     "Facturá correctamente, también si vendés online.",
-    ["Factura electrónica", "Marketplace y e-commerce", "Asesoramiento"],
+    ["Factura electrónica", "Marketplace y e-commerce", "Asesoramiento y seguimiento"],
   ],
   [
     "?",
@@ -35,7 +35,7 @@ const SERVICES: Array<[string, string, string, string[]]> = [
     "↻",
     "Planes y regularización",
     "Analizamos alternativas cuando aparecen deudas u obligaciones pendientes.",
-    ["Moratorias y planes", "AFIP, ARBA y AGIP", "Adhesión cuando corresponda"],
+    ["Moratorias y planes", "ARCA, ARBA y AGIP", "Adhesión cuando corresponda"],
   ],
 ];
 
