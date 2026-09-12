@@ -12,10 +12,10 @@ const AUDIENCES: Array<{
     text: "Querés cumplir sin estar pendiente de cada vencimiento.",
     popupTitle: "¿Sos monotributista?",
     bullets: [
-      "Te avisamos antes de cada vencimiento.",
-      "Facturación electrónica sin dolores de cabeza.",
-      "Te decimos cuándo conviene recategorizarte.",
-    ],
+   "Controlamos que no te pases de categoría sin darte cuenta.",
+   "Te avisamos antes de cada vencimiento (ARCA, recategorización, etc.).",
+   "Facturación electrónica ordenada, sin dolores de cabeza.",
+  ],
   },
   {
     title: "💻 Negocio digital",
@@ -24,7 +24,7 @@ const AUDIENCES: Array<{
     bullets: [
       "Conciliamos tus ventas de Mercado Libre y marketplaces.",
       "Manejamos las retenciones de estas plataformas por vos.",
-      "Reportes claros de rentabilidad por canal.",
+      "Cada retención de tus ventas online la imputamos a tu favor en la declaración.",
     ],
   },
   {
@@ -34,7 +34,7 @@ const AUDIENCES: Array<{
     bullets: [
       "IVA, Ganancias y todo al día, sin sorpresas.",
       "Seguimiento fiscal integral, no solo carga de datos.",
-      "Planificamos para que no te agarre desprevenido un pago grande.",
+      "Proyectamos tu año fiscal para que no pagues de más.",
     ],
   },
   {
