@@ -15,13 +15,7 @@ export default defineConfig({
   experimental: {
     tasks: true,
   },
-  tasks: {
-    "supabase:ping": {
-      handler: "./tasks/supabase-ping.ts",
-      description: "Ping semanal a Supabase para evitar pausa por inactividad",
-    },
-  },
   scheduledTasks: {
-    "0 8 * * 1": "supabase:ping",
+    "0 8 * * 1": "supabase-ping",
   },
 });
