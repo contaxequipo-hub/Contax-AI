@@ -94,14 +94,24 @@ export function WhatsAppButton() {
           {!enviado && (
             <form
               onSubmit={handleEnviar}
-              className="flex items-center gap-2 border-t border-black/5 bg-white px-3 py-3"
+              className="flex items-end gap-2 border-t border-black/5 bg-white px-3 py-3"
             >
-              <input
-                type="text"
+              <textarea
                 value={mensaje}
-                onChange={(e) => setMensaje(e.target.value)}
+                onChange={(e) => {
+                  setMensaje(e.target.value);
+                  e.target.style.height = "auto";
+                  e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    e.currentTarget.closest("form")?.requestSubmit();
+                  }
+                }}
                 placeholder="Escribí tu consulta…"
-                className="flex-1 rounded-full border border-black/10 bg-[#f5f5f5] px-4 py-2 text-[14px] text-[#1f1f1f] outline-none transition focus:border-[#25D366]"
+                rows={1}
+                className="max-h-[120px] flex-1 resize-none overflow-y-auto rounded-[18px] border border-black/10 bg-[#f5f5f5] px-4 py-2 text-[14px] leading-snug text-[#1f1f1f] outline-none transition focus:border-[#25D366]"
               />
               <button
                 type="submit"
