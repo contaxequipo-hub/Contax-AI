@@ -1,0 +1,5 @@
+{
+  "error": true,
+  "status": 400,
+  "message": "Missing x-vercel-cron-schedule header"
+}
