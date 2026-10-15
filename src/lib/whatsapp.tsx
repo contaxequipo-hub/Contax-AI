@@ -3,6 +3,12 @@ import { useState, type FormEvent } from "react";
 const WHATSAPP_NUMBER = "5491126577018";
 const MENSAJE_PREDETERMINADO = "Hola! Quiero hacer una consulta sobre Contax-AI.";
 
+// Se mantiene este export porque otros archivos (Nav.tsx, Hero.tsx) ya lo
+// usan para armar links directos a WhatsApp desde otras partes del sitio.
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  MENSAJE_PREDETERMINADO
+)}`;
+
 export function WhatsAppButton() {
   const [abierto, setAbierto] = useState(false);
   const [mensaje, setMensaje] = useState("");
