@@ -131,7 +131,7 @@ export function WhatsAppButton() {
 
       {/* Globo de diálogo que invita a escribir */}
       {!abierto && mostrarGlobo && (
-        <div className="fixed bottom-7 right-[82px] z-[60] flex max-w-[180px] items-center gap-2 rounded-[16px] rounded-br-[4px] bg-white px-4 py-3 text-[13px] font-bold leading-snug text-[#1f1f1f] shadow-[0_8px_24px_rgba(0,0,0,0.18)] max-sm:bottom-6 max-sm:right-[70px] max-sm:max-w-[150px] max-sm:px-3 max-sm:py-2 max-sm:text-[12px]">
+        <div className="fixed bottom-9 right-[110px] z-[60] flex max-w-[180px] items-center gap-2 rounded-[16px] rounded-br-[4px] bg-white px-4 py-3 text-[13px] font-bold leading-snug text-[#1f1f1f] shadow-[0_8px_24px_rgba(0,0,0,0.18)] max-sm:bottom-7 max-sm:right-[88px] max-sm:max-w-[150px] max-sm:px-3 max-sm:py-2 max-sm:text-[12px]">
           <span>¿Tenés una consulta? ¡Escribinos! 💬</span>
           <button
             type="button"
